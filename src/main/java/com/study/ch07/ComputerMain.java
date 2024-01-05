@@ -2,7 +2,7 @@ package com.study.ch07;
 
 public class ComputerMain {
     public static void main(String[] args) {
-        //생성자 호출 - 함수 호출
+        // 생성자 호출 - 함수 호출
         // new 해서 생성하면 무조건 주소값 리턴 자료x
         Computer computer1 = new Computer(); // 생성
         // 컴퓨터자료형을 대입(값) - 주소 값(실제 데이터가 있는 위치)
