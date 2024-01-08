@@ -11,17 +11,17 @@ public class CarMain {
 //      Car car1 = null;
 //      Car car2 = null;
 //      Car car3 = null; // 자동차 3개 생성
-        // 배열 따로 서비스, 레포지토리
+        // 배열 따로 서비스, 레포지토리 따로 각각생성
         Car[] cars =new Car[3];
         // 배열 생성후 레포지토리 (순서)
 
         // 주소를 준거
         CarRepository carRepository = new CarRepository(cars);
-        // carRepository.cars = cars; 외부 주입 결합도가 낮다. 레포지토리에서 배열 생성하고 의존성 주입
+        // carRepository.cars = cars; 외부 주입 결합도가 높다.(의존성이 높다.) 레포지토리에서 배열 생성하고 의존성 주입
         // 순서 레포지토리 다음 서비스
         // CarService carService = new CarService(new carRepository(new car[3]));
-        CarService carService = new CarService(carRepository); // 서비스안에 레포지토리 만들면 결합도가 높다.
-        // carService.carRepository = carRepository;  외부에서 주입 결합도가 낮다. 서비스에서 레포지토리 만들어줌
+        CarService carService = new CarService(carRepository); // 서비스안에 레포지토리 만들면 결합도가 낮다.
+        // carService.carRepository = carRepository;  외부에서 주입 결합도가 높다.(의존성이 높다.) 서비스에서 레포지토리 만들어줌
         // 언제든지 카레포지토리는 다른 거로 변경 가능; 부품화
         //  Car car = new Car(model, color); 레포지토리를 생성할때 주입 엔티티(정보를 담는 클래스) // entity
 
@@ -85,7 +85,7 @@ public class CarMain {
                 carService.append(car);
 
 
-                //car1 = new Car(model, color);
+                // car1 = new Car(model, color);
                 // car1만 생성 car2 생성 불가 (변수명은 바꿀 수 없다.) 배열을 사용
                 // cars[0] = new Car(model, color);
                 // System.out.println(cars[0].toString());
@@ -97,7 +97,6 @@ public class CarMain {
 
             } else if("2".equals(selectedMenu)) {
                 System.out.println("<<< 자동차 조회 페이지 >>>");
-
                 carService.printCarList();
                 // System.out.println(car1.toString());
 //                for (int i = 0; i < cars.length ; i++) {

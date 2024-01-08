@@ -25,7 +25,7 @@ public class CarRepository {
         for(int i= 0; i < cars.length; i++) {
             if(cars[i] == null) {
                 return i;
-            } // 해당 index 함수 빠져나감.(break 쓸 필요 x)
+            } // 해당 index 함수 빠져나감.(break .쓸 필요 x)
         }
         return -1;
     }
