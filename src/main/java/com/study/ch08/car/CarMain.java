@@ -24,6 +24,7 @@ public class CarMain {
         // carService.carRepository = carRepository;  외부에서 주입 결합도가 높다.(의존성이 높다.) 서비스에서 레포지토리 만들어줌
         // 언제든지 카레포지토리는 다른 거로 변경 가능; 부품화
         //  Car car = new Car(model, color); 레포지토리를 생성할때 주입 엔티티(정보를 담는 클래스) // entity
+        // 좋은거 결합도가 낮고 응집도가 높은거(의존성이 낮다.)
 
         while(loopFlag) { // loop 밖 생성
             System.out.println("자동차 관리 프로그램");
@@ -43,7 +44,9 @@ public class CarMain {
                 String model = null;
                 String color = null;
 
-                // Repository영역 비어있는지 확인(서비스) 데이터를 가지고 온다.(레포지토리) 배열가지고 하는 거 Repository
+                // Repository영역 비어있는지 확인(서비스) 데이터를 가지고 온다.(레포지토리)
+
+                // CRUD 배열가지고 하는 거 Repository
 
                 if(carService.isFull()) {
                     System.out.println("더이상 등록할 수 없습니다.");

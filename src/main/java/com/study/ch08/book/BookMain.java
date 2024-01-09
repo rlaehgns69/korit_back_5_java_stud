@@ -1,4 +1,4 @@
-package com.study.ch08.Book;
+package com.study.ch08.book;
 
 import java.util.Scanner;
 

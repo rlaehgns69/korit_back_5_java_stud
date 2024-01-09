@@ -1,9 +1,12 @@
 package com.study.ch09;
 
+// 샹속 받아서 재정의 사용 가능한가? (원형 분석)
 public class ElectronicDeviceMain {
     public static void main(String[] args) {
         ElectronicDevice[] electronicDevices = new ElectronicDevice[10];
 
+        // electronicdevice 상속받음 컴퓨터 스마트폰
+        // 사용할 수 있는 멤버 개수 제한 부모사용가능한 것만 사용.(제한됨.)
         for (int i = 0; i < electronicDevices.length ; i++) {
             electronicDevices[i] = i % 2 == 0 ? new Computer() : new SmartPhone() ;
         }
@@ -12,7 +15,7 @@ public class ElectronicDeviceMain {
             electronicDevices[i].showDeviceState();
         }
         // 메서드의 재정의 우선 (메소드 오버라이딩)
-        System.out.println();
+        // System.out.println();
         for (int i = 0; i < electronicDevices.length; i++) {
             electronicDevices[i].setPowerOn();
         }
