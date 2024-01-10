@@ -18,5 +18,7 @@ public interface Power {
     }
 }
 
-// System, Integer static interface Power.ERROR_CODE 사용 가능 public 붙여져있는 main클래스 외부 거 사용 가능 ConstanMain.main(null)
+// System, Integer static
+// interface Power.ERROR_CODE 사용 가능
+// public 붙어져있는 외부 거 사용 가능 ConstanMain.main(null)
 // 생성없이 호출 static static안에서 일반 메서드 사용하려면 생성해서 사용해야 함.
