@@ -2,7 +2,7 @@ package com.study.ch13;
 
 public class Factory {
     // 자기 자신 클래스를 스태틱 변수(변수명: instance)로 가지고 있어야 한다.
-    private static Factory instance; // 기본값 null
+    private static Factory instance = new Factory(); // 기본값 null
     private String factoryName;
     private int autoCount;
     private final int DEFAULT_NUMBER =20240000;

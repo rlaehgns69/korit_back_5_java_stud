@@ -1,6 +1,5 @@
 package com.study.ch19;
 
-import lombok.Builder;
 import lombok.ToString;
 
 @ToString
@@ -14,13 +13,12 @@ public class Car {
     }
 
     public static CarBuilder builder() {
-        Car car = new Car("아반떼", "검은색");
+//        Car car = new Car("아반떼", "검은색");
         //car.CarBuilder;
         // (new Car()).new CarBuilder();
 
         return new Car.CarBuilder();
         // new CarBuilder();
-
     }
 
     
@@ -29,7 +27,6 @@ public class Car {
     public static class CarBuilder {
         private String model;
         private String color;
-
 
         // 내부 클래스
 //      Car.CarBuilder carBuilder = Car.builder();
@@ -47,6 +44,5 @@ public class Car {
             this.color = color;
             return this;
         }
-
     }
 }
