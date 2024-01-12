@@ -10,7 +10,7 @@ public class MemberService {
         // 리턴자료형을 함수로
         while(true) {
             System.out.print(label+"(입력취소: exit) >>> ");
-            value= scanner.nextLine();
+            value = scanner.nextLine();
             if(!value.isBlank()) {
                 break;
             }

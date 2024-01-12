@@ -12,6 +12,7 @@ public class ArrayMain {
         arrayService.add("김도5");
         arrayService.add("김도6");
 
+
         System.out.println(arrayService.toString());
 
         System.out.println(arrayService.indexOf("김도훈"));

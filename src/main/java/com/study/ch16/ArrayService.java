@@ -14,6 +14,7 @@ public class ArrayService {
         strArray = newArray; // 주소이전 100 -> 200
         strArray[strArray.length-1] = str;
     }
+
     public void remove(int index) {
         String[] newArray = new String[strArray.length - 1];
         for (int i = 0; i < newArray.length ; i++) {
@@ -21,9 +22,11 @@ public class ArrayService {
         }
         strArray = newArray;
     }
+
     public String get(int index) {
         return strArray[index];
     }
+
     public int indexOf(String str) {
         if(str == null) {
             return -1;
@@ -35,6 +38,7 @@ public class ArrayService {
         }
         return -1;
     }
+
     @Override
     public String toString() {
         String result = "Array[ ";
@@ -45,8 +49,8 @@ public class ArrayService {
                 result += ",";
             }
         }
-        result += " ]";
 
+        result += " ]";
         return result;
     }
 }
