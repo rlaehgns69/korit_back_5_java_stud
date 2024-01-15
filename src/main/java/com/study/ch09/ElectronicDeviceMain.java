@@ -4,7 +4,6 @@ package com.study.ch09;
 public class ElectronicDeviceMain {
     public static void main(String[] args) {
         ElectronicDevice[] electronicDevices = new ElectronicDevice[10];
-
         // electronicdevice 상속받음 컴퓨터 스마트폰
         // 사용할 수 있는 멤버 개수 제한 부모사용가능한 것만 사용.(제한됨.)
         for (int i = 0; i < electronicDevices.length ; i++) {
